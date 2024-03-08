@@ -1,15 +1,15 @@
 import {Text, View} from "react-native";
 
-const HomeScreen = () => {
+const WorkoutScreen = () => {
 
     return (
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <Text>Home Screen !</Text>
+            <Text>Workout Screen !</Text>
         </View>
     )
 }
 
-export default HomeScreen;
+export default WorkoutScreen;
 
 // Screens-
 // 1. Main Home screen (Workout).
