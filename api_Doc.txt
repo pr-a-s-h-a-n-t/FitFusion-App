@@ -1,0 +1,134 @@
+
+---
+
+## User Account Module
+
+### 1. Create User Account
+
+- **Endpoint:** `POST /api/users`
+- **Description:** Create a new user account.
+- **Request Body:**
+  ```json
+  {
+      "username": "string",
+      "email": "string",
+      "password": "string"
+  }
+  ```
+
+### 2. Get User Account
+
+- **Endpoint:** `GET /api/users/{userId}`
+- **Description:** Retrieve user account details by user ID.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+
+### 3. Update User Account
+
+- **Endpoint:** `PUT /api/users/{userId}`
+- **Description:** Update user account details.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+- **Request Body:**
+  ```json
+  {
+      "username": "string",
+      "email": "string",
+      "password": "string"
+  }
+  ```
+
+### 4. Delete User Account
+
+- **Endpoint:** `DELETE /api/users/{userId}`
+- **Description:** Delete user account by user ID.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+
+---
+
+## Activity Module
+
+### 1. Create Activity
+
+- **Endpoint:** `POST /api/activities`
+- **Description:** Record a new activity (e.g., a running session).
+- **Request Body:**
+  ```json
+  {
+      "type": "string",
+      "duration": "string",
+      "distance": "string"
+  }
+  ```
+
+### 2. Get Activity
+
+- **Endpoint:** `GET /api/activities/{activityId}`
+- **Description:** Retrieve activity details by activity ID.
+- **Path Parameter:**
+  - `activityId` (string): Unique identifier of the activity.
+
+### 3. Update Activity
+
+- **Endpoint:** `PUT /api/activities/{activityId}`
+- **Description:** Update activity details.
+- **Path Parameter:**
+  - `activityId` (string): Unique identifier of the activity.
+- **Request Body:**
+  ```json
+  {
+      "type": "string",
+      "duration": "string",
+      "distance": "string"
+  }
+  ```
+
+### 4. Delete Activity
+
+- **Endpoint:** `DELETE /api/activities/{activityId}`
+- **Description:** Delete activity by activity ID.
+- **Path Parameter:**
+  - `activityId` (string): Unique identifier of the activity.
+
+---
+
+## Settings Module
+
+### 1. Get User Settings
+
+- **Endpoint:** `GET /api/settings/{userId}`
+- **Description:** Retrieve user settings by user ID.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+
+### 2. Update User Settings
+
+- **Endpoint:** `PUT /api/settings/{userId}`
+- **Description:** Update user settings.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+- **Request Body:**
+  ```json
+  {
+      "autoPlayTimer": "string",
+      "pauseTimer": "string",
+      "goals": {
+          "distance": "string",
+          "otherGoal": "string"
+      }
+  }
+  ```
+
+### 3. Reset User Settings
+
+- **Endpoint:** `POST /api/settings/{userId}/reset`
+- **Description:** Reset user settings to default values.
+- **Path Parameter:**
+  - `userId` (string): Unique identifier of the user.
+
+---
+
+This documentation provides clear details about each API endpoint,
+including their purpose, request methods, parameters, and request/response formats,
+ which should assist your frontend developers in integrating with the backend effectively.
