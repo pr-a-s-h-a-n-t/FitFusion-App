@@ -1,10 +1,15 @@
-import {Text, View} from "react-native";
+import {Button, Text, View} from "react-native";
+import {GlobalStyles} from "../../globalStyles/GlobalStyles.ts";
 
-const MyActivityScreen = () => {
+const MyActivitiesScreen = ({navigation}) => {
     return (
-        <View>
+        <View style={GlobalStyles.screen_wrapper}>
             <Text>Activity Screen !</Text>
+            <Button
+                onPress={()=> navigation.navigate("ActivityDetail")}
+                title={"Activity Detail"}
+            />
         </View>
     )
 }
-export default MyActivityScreen;
+export default MyActivitiesScreen;
